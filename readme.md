@@ -13,54 +13,64 @@ From there, the user can construct URL's with the following endpoints.
 
 To register as a user for the API, make sure to include your desired username and password within the body of your request:
 
+```json
 {
-    "username": [username],
-    "password": [password]
+    "username": username,
+    "password": password
 }
+```
 
 ### /login (POST)
 
 To login as a user for the API, make sure to include your username and password within the body of your request:
 
+```json
 {
-    "username": [username],
-    "password": [password]
+    "username": username,
+    "password": password
 }
+```
 
 If the login is successful, you will receive two JWT tokens - an access token and a refresh token:
 
+```json
 {
-    "accessToken": [token],
-    "refreshToken": [token]
+    "accessToken": token,
+    "refreshToken": token
 }
+```
 
 ### /environments/add-environment (POST)
 
 To create a new environment for your Python or Ruby packages, pass in the access token in an "authorization" header. In addition, pass in the following data in the request body:
 
+```json
 {
-    "name": [name of your environment],
-    "envType": [type of environment - "python" or "ruby"]
+    "name": name of your environment,
+    "envType": type of environment - "python" or "ruby"
 }
+```
 
 ### /environments (GET)
 
 To get all environments associated with your account, pass in the access token in an "authorization" header. It should return a list of json objects with the following format:
 
+```json
 [
     ...
 
     {
         "json_data": {
-            "envID": [id of environment],
-            "name": [name of environment],
-            "envType": [type of environment - "python" or "ruby"],
-            "packages": [a list of packages in string format]
+            "envID": id of environment,
+            "name": name of environment,
+            "envType": type of environment - "python" or "ruby",
+            "packages": a list of packages in string format
         }
     }
 
     ...
 ]
+```
 
 ### /environments/:envID (GET)
 
