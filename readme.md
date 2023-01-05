@@ -80,11 +80,18 @@ To get an environment associated with your account by environment id, call the t
 
 This should return only one JSON array with one JSON object containing the same type of JSON properties as in getting all environments.
 
-### /environments/add-packages/:envID (PUT)
+### /environments/add-packages/ (PUT)
 
-To add packages associated with your account by environment id, call the total url, replacing ":envID" with the id of your choice (and passing in your JWT access token in "authorization" as well):
+To add packages associated with your account by environment id, call the endpoint and add the following to the body of the request:
 
-{BASE_URL}/environment/{environment-id}
+```json
+{
+    "envID": environment id,
+    "packages": packages in list form (i.e. ["numpy", "pandas", "matplotlib"])
+}
+```
+
+Also be sure to include the JWT in the "authorization" header as well.
 
 This should return only one JSON array with one JSON object containing the same type of JSON properties as in getting all environments.
 
