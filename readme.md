@@ -3,9 +3,13 @@
 ## Overview
 The goal of this project is to create and test a REST-ful API that manages user environments for the Python and Ruby languages on a high level. The API makes use of NodeJS/ExpressJS with a PostgreSQL database.
 
+The API generally functions like so:
+
+![](/Package%20Manager%20API%20Diagram.jpg)
+
 ## Usage
 
-The base url of the API is as follows: [INSERT LINK HERE]
+The base url of the API is hosted on the following domain: https://www.pma.kyperapps.com
 
 From there, the user can construct URL's with the following endpoints.
 
@@ -80,7 +84,7 @@ To get an environment associated with your account by environment id, call the t
 
 This should return only one JSON array with one JSON object containing the same type of JSON properties as in getting all environments.
 
-### /environments/add-packages/ (PUT)
+### /environments/add-packages (PUT)
 
 To add packages associated with your account by environment id, call the endpoint and add the following to the body of the request:
 
@@ -95,7 +99,7 @@ Also be sure to include the JWT in the "authorization" header as well.
 
 This should return only one JSON array with one JSON object containing the same type of JSON properties as in getting all environments.
 
-### environments/delete-environments (DELETE)
+### /environments/delete-environments (DELETE)
 
 To clear all environments associated with your account, call this endpoint with your JWT access token. This will clear all the environments you've created.
 
