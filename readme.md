@@ -7,11 +7,15 @@ The API generally functions like so:
 
 ![](/Package%20Manager%20API%20Diagram.jpg)
 
-## Usage
+## Deployment
 
 The base url of the API is hosted on the following domain: https://www.pma.kyperapps.com
 
-From there, the user can construct URL's with the following endpoints.
+This application is deployed on DigitalOcean and configured using nginx, pm2, and Let's Encrypt.
+
+## Usage
+
+From the base url, the user can construct URL's with the following endpoints.
 
 ### /register (POST)
 
