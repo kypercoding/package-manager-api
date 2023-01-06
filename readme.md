@@ -135,3 +135,13 @@ REFRESH_TOKEN_SECRET=[another long JWT token secret]
 8. Run the API server by calling ```node server.js```
 
 The API should now be functioning locally.
+
+# Tasks
+- [x] Implemented basic POST, GET, DELETE, and PUT requests
+- [x] Implemented basic JWT token authentication
+- [x] Deployed onto DigitalOcean Droplet
+- [x] Write basic usage guide for API
+- [ ] Implement PUT and DELETE requests for specific environments
+- [ ] Handle forgotten user credentials (i.e. forgot password, etc) and user deletion functions (i.e. delete account)
+
+More tasks may appear as time goes on.
